@@ -2,6 +2,8 @@
   "name": "Facebook-Graph-Visualizer",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.4.x"
+    "express"		: "3.4.x",
+    "handlebars": "1.1.x",
+    "hbs"				: "2.4.x"
   }
 }
