@@ -1,1 +1,7 @@
-package.json
+{
+  "name": "Facebook-Graph-Visualizer",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.4.x"
+  }
+}

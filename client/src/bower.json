@@ -1,0 +1,11 @@
+{
+  "name": "Facebook-Graph-Visualizer",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery"	  : "1.8.x",
+    "underscore": "1.5.x",
+    "backbone"	: "1.1.x",
+    "requirejs"	: "2.1.x",
+    "d3"      	: "3.3.x"
+  }
+}
