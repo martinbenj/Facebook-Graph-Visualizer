@@ -19,18 +19,22 @@ app.use(fb.middleware({ appId : "229466340535430", secret : "02a946772bc2de709f8
 
 // Root route
 app.get('/', function(req, res){
+	res.render(path.join(__dirname + '/../client/src/index.html'));
+});
 
-	req.facebook.api('/me/friends', function(err, friends) {
+app.get('/facebook', function(req, res) {
+	console.log('facebook');
 
-		if (err) {
-			throw(err);
-		}
+	// req.facebook.api('/me/friends', function(err, friends) {
 
-		console.log(friends.data);	
+	// 	if (err) {
+	// 		throw(err);
+	// 	}
 
-		var body = res.render(__dirname + "/assets", {path: __dirname, people: friends.data});
-  });
-	// res.render(path.join(__dirname + '/../client/src/index.html'));
+	// 	console.log(friends.data);	
+
+	// 	var body = res.render(__dirname + "/assets", {path: __dirname, people: friends.data});
+ //  });
 });
 
 app.set('port', process.env.PORT || 3000); //config

@@ -1,3 +1,4 @@
+
 var LoginView = Backbone.View.extend({
 
 	el: $('body'),
@@ -7,9 +8,7 @@ var LoginView = Backbone.View.extend({
 	},
 
 	render: function(){
-
-		$(this.el).append('hi there');
-
+		$(this.el).append('<a href="/facebook">Facebook</a>');
 	}
 
 });
