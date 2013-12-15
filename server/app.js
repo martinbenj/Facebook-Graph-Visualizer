@@ -22,19 +22,21 @@ app.get('/', function(req, res){
 	res.render(path.join(__dirname + '/../client/src/index.html'));
 });
 
-app.get('/facebook', function(req, res) {
-	console.log('facebook');
+app.get('/facebook', fb.loginRequired(), function(req, res) {
 
-	// req.facebook.api('/me/friends', function(err, friends) {
 
-	// 	if (err) {
-	// 		throw(err);
-	// 	}
+	console.log(req.facebook);
 
-	// 	console.log(friends.data);	
+	req.facebook.api('/me/friends', function(err, friends) {
 
-	// 	var body = res.render(__dirname + "/assets", {path: __dirname, people: friends.data});
- //  });
+		// if (err) {
+		// 	throw(err);
+		// }
+
+		console.log(friends.data);	
+
+		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
+  });
 });
 
 app.set('port', process.env.PORT || 3000); //config
