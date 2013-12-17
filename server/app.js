@@ -23,18 +23,12 @@ app.get('/', function(req, res){
 });
 
 app.get('/facebook', fb.loginRequired(), function(req, res) {
-
-
-	console.log(req.facebook);
-
 	req.facebook.api('/me/friends', function(err, friends) {
 
-		// if (err) {
-		// 	throw(err);
-		// }
-
-		console.log(friends.data);	
-
+		// How to render a js file that renders html?
+		// How did you have server-side and client-side routes on personal website?
+		// Obviously you won't be serving a js file
+		// But you can send data back instead of rendering a page (res.send(data));
 		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
   });
 });
