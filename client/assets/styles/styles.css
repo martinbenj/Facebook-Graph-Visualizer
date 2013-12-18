@@ -1,3 +1,7 @@
+.background-image {
+	-webkit-filter: blur(10px);
+}
+
 .facebook-login {
 	height:50px;
 	width:230px;
