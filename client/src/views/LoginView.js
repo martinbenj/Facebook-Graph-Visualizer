@@ -11,7 +11,7 @@ var LoginView = Backbone.View.extend({
 	},
 
 	render: function(){
-		$(this.el).append('<a href="/facebook">Facebook</a><button id="fb">click me</button>');
+		$(this.el).append('<div class="wrapper"><a href="/facebook"><img class="facebook-login" src="../../assets/images/facebook-login-button.png" /></a></div>');
 		// var loadingView = new LoadingView();
 	},
 
