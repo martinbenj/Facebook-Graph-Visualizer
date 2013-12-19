@@ -30,9 +30,9 @@ app.get('/facebook', fb.loginRequired(), function(req, res) {
 		// Obviously you won't be serving a js file
 		// But you can send data back instead of rendering a page (res.send(data));
 
-		res.send(friends.data);
+		// res.send(friends.data);
 
-		// var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
+		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
   });
 });
 

@@ -1,5 +1,9 @@
 .background-image {
 	-webkit-filter: blur(10px);
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
 }
 
 .facebook-login {
