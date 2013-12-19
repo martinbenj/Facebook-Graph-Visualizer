@@ -12,3 +12,8 @@
 	margin:auto;
 	position:absolute;
 }
+
+.profile-picture {
+	border-radius: 999px;
+	border:5px solid #567;
+}

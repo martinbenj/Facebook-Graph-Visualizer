@@ -29,7 +29,10 @@ app.get('/facebook', fb.loginRequired(), function(req, res) {
 		// How did you have server-side and client-side routes on personal website?
 		// Obviously you won't be serving a js file
 		// But you can send data back instead of rendering a page (res.send(data));
-		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
+
+		res.send(friends.data);
+
+		// var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
   });
 });
 
