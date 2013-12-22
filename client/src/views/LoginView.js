@@ -2,6 +2,8 @@ var LoginView = Backbone.View.extend({
 
 	el: $('body'),
 
+	model: app,
+
 	initialize: function(){
 		this.render();
 
@@ -28,4 +30,4 @@ var LoginView = Backbone.View.extend({
 
 });
 
-var loginView = new LoginView({model: app});
+var loginView = new LoginView();
