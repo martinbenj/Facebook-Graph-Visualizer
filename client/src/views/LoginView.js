@@ -20,7 +20,7 @@ var LoginView = Backbone.View.extend({
 
 	createLoadingView: function(e){
 		debugger;
-		this.model.trigger('blah');
+		this.model.trigger('createLoadingView');
 	},
 
 	resizeBackground: function() {
