@@ -3,7 +3,7 @@ var LoadingView = Backbone.View.extend({
 	el: $('body'),
 
 	initialize: function(){
-		this.model.on('blah', this.render, this);
+		this.model.on('createLoadingView', this.render, this);
 	},
 
 	render: function(){

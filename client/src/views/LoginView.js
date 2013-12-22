@@ -19,7 +19,6 @@ var LoginView = Backbone.View.extend({
 	},
 
 	createLoadingView: function(e){
-		debugger;
 		this.model.trigger('createLoadingView');
 	},
 
