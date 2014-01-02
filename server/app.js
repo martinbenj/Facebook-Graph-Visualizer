@@ -22,19 +22,39 @@ app.get('/', function(req, res){
 	res.render(path.join(__dirname + '/../client/src/index.html'));
 });
 
-app.get('/facebook', fb.loginRequired(), function(req, res) {
-	req.facebook.api('/me/friends', function(err, friends) {
+app.get('/facebook', function(req, res) {
 
-		// How to render a js file that renders html?
-		// How did you have server-side and client-side routes on personal website?
-		// Obviously you won't be serving a js file
-		// But you can send data back instead of rendering a page (res.send(data));
+	res.header("Access-Control-Allow-Origin", "*");
 
-		// res.send(friends.data);
+	var images = [
+		path.join(__dirname + '/../client/assets/images/happy.jpg'),
+		path.join(__dirname + '/../client/assets/images/social-graph.png'),
+		path.join(__dirname + '/../client/assets/images/facebook-login-button.png')
+	];
 
-		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: friends.data});
-  });
+	res.send('{"hi": "there"}');
+
+	res.end();
+
+	// var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: images});
 });
+
+// app.get('/facebook', fb.loginRequired(), function(req, res) {
+// 	req.facebook.api('/me/friends', function(err, friends) {
+
+// 		// res.send(friends.data);
+
+// 		// Instead of friends.data, send an array of relative urls for images
+
+// 		var images = [
+// 			path.join(__dirname + '/../client/assets/images/happy.jpg'),
+// 			path.join(__dirname + '/../client/assets/images/social-graph.png'),
+// 			path.join(__dirname + '/../client/assets/images/facebook-login-button.png')
+// 		];
+
+// 		var body = res.render(path.join(__dirname + '/../client/src/index.html'), {people: images});
+//   });
+// });
 
 app.set('port', process.env.PORT || 3000); //config
 app.listen(app.get('port')); //execution

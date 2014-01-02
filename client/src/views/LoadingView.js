@@ -5,12 +5,13 @@ var LoadingView = Backbone.View.extend({
 	model: app,
 
 	initialize: function(){
-		this.model.on('createLoadingView', this.render, this);
+		this.render();
 		this.model.trigger('createVizualizerView');
-		console.log('LoadingView Created');
+		// alert('LoadingView Created');
 	},
 
 	render: function(){
+		// alert('loadingView rendered');
 	}
 
 });
